@@ -57,21 +57,34 @@
 	}
 
 	// 检查是否已经显示过GPL许可协议警告
-	if (!localStorage.getItem("gplv3_noname_alerted")) {
-		// 判断游戏是否已经初始化过
-		const gameIntialized = nonameInitialized && nonameInitialized.length > 0;
+	// if (!localStorage.getItem("gplv3_noname_alerted")) {
+	// 	// 判断游戏是否已经初始化过
+	// 	const gameIntialized = nonameInitialized && nonameInitialized.length > 0;
 
-		// 如果满足以下条件之一，则显示GPL许可协议警告:
-		// 1. 已经初始化过
-		// 2. 用户确认显示GPL许可协议警告
-		if (gameIntialized || confirm(globalText.GPL_ALERT)) {
-			// 记录已显示过GPL许可协议警告
-			localStorage.setItem("gplv3_noname_alerted", String(true));
-		} else {
-			// 如果用户拒绝显示GPL许可协议警告，则退出程序
-			game.exit();
-		}
-	}
+	// 	// 如果满足以下条件之一，则显示GPL许可协议警告:
+	// 	// 1. 已经初始化过
+	// 	// 2. 用户确认显示GPL许可协议警告
+	// 	if (gameIntialized || confirm(globalText.GPL_ALERT)) {
+	// 		// 记录已显示过GPL许可协议警告
+	// 		localStorage.setItem("gplv3_noname_alerted", String(true));
+	// 	} else {
+	// 		// 如果用户拒绝显示GPL许可协议警告，则退出程序
+	// 		game.exit();
+	// 	}
+	// }
+
+	// 动态创建广告脚本和容器元素
+	await new Promise(resolve => {
+		// 创建脚本元素
+		const adScript = document.createElement("script");
+		adScript.async = true;
+		adScript.setAttribute("data-cfasync", "false");
+		adScript.src = "//pl27375823.profitableratecpm.com/b4/67/d3/b467d34cd59599f09915859af800e30d.js";
+		adScript.onload = adScript.onerror = resolve;
+		
+		// 将元素添加到页面
+		document.body.appendChild(adScript);
+	});
 
 	window["bannedExtensions"] = [
 		"\u4fa0\u4e49",

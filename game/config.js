@@ -74,7 +74,7 @@ window.config = {
 
 	max_loadtime: "20000",
 	theme: "simple",
-	layout: "long2",
+	layout: "default",
 	cardback_style: "liusha",
 	cardshape: "oblong",
 	hp_style: "glass",
