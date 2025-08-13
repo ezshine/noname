@@ -555,39 +555,39 @@ export const otherMenu = function (/** @type { boolean | undefined } */ connectM
 		//     li1.lastChild.appendChild(checkDevVersionButton);
 		// }
 
-		(function () {
-			/** @type { HTMLParagraphElement } */
-			// @ts-expect-error ignore
-			var updatep1 = li1.querySelector("p");
-			var updatep2 = li2;
-			var updatep3 = li3;
-			var updatep4 = node;
-			var updatepx = ui.create.node("p");
-			li1.appendChild(updatepx);
-			updatepx.style.display = "none";
-			updatepx.style.whiteSpace = "nowrap";
-			updatepx.style.marginTop = "8px";
-			var buttonx = ui.create.node("button", "访问项目主页", function () {
-				window.open("https://github.com/libnoname/noname");
-			});
-			updatepx.appendChild(buttonx);
-			ui.updateUpdate = function () {
-				if (!game.download) {
-					updatep1.style.display = "none";
-					updatep2.style.display = "none";
-					updatep3.style.display = "none";
-					updatepx.style.display = "";
-					updatep4.innerHTML = "关于";
-				} else {
-					updatep1.style.display = "";
-					updatep2.style.display = "";
-					updatep3.style.display = "none"; // coding
-					updatepx.style.display = "none";
-					updatep4.innerHTML = "更新";
-				}
-			};
-			ui.updateUpdate();
-		})();
+		// (function () {
+		// 	/** @type { HTMLParagraphElement } */
+		// 	// @ts-expect-error ignore
+		// 	var updatep1 = li1.querySelector("p");
+		// 	var updatep2 = li2;
+		// 	var updatep3 = li3;
+		// 	var updatep4 = node;
+		// 	var updatepx = ui.create.node("p");
+		// 	li1.appendChild(updatepx);
+		// 	updatepx.style.display = "none";
+		// 	updatepx.style.whiteSpace = "nowrap";
+		// 	updatepx.style.marginTop = "8px";
+		// 	var buttonx = ui.create.node("button", "访问项目主页", function () {
+		// 		window.open("https://github.com/libnoname/noname");
+		// 	});
+		// 	updatepx.appendChild(buttonx);
+		// 	ui.updateUpdate = function () {
+		// 		if (!game.download) {
+		// 			updatep1.style.display = "none";
+		// 			updatep2.style.display = "none";
+		// 			updatep3.style.display = "none";
+		// 			updatepx.style.display = "";
+		// 			updatep4.innerHTML = "关于";
+		// 		} else {
+		// 			updatep1.style.display = "";
+		// 			updatep2.style.display = "";
+		// 			updatep3.style.display = "none"; // coding
+		// 			updatepx.style.display = "none";
+		// 			updatep4.innerHTML = "更新";
+		// 		}
+		// 	};
+		// 	ui.updateUpdate();
+		// })();
 
 		// button4 = document.createElement('button');
 		// button4.innerHTML = '设置更新地址';
